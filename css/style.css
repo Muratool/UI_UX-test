@@ -1,125 +1,161 @@
 * {
 	padding: 0;
 	margin: 0;
-  border: 0;
+	border: 0;
 	text-decoration: none;
 	color: white;
 	font-family: sans-serif;
 }
 
-*, *::before, *::after{
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-
+*,
+*::before,
+*::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-:focus, :active { outline: none;}
-a:focus, a:active{outline: none;}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
 
 html,
 body {
 	height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 
-  background-color: #333;
+	background-color: #333;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
-.fullscreen-first{
-  min-height: 100vh;
-  background-image: url('/img/first-page-background.jpg');
-  background-size: cover;
+.fullscreen-first {
+	min-height: 100vh;
+	background-image: url('/img/first-page-background.jpg');
+	background-size: cover;
+	background-attachment: fixed;
 
-  display: flex;
-  padding: 20px 0;
-  
+	display: flex;
+	padding: 20px 0;
 }
 
-.fullscreen-body{
-  flex: 1 1 auto;
-  max-width: 1000px;
-  margin: 0 auto;
+.fullscreen-body {
+	flex: 1 1 auto;
+	max-width: 80%;
+	margin: 0 auto;
 
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .fullscreen-title {
-  font-size: 50px;
+	font-size: 50px;
 }
 
 .squere {
-  min-height: 100px;
-  display: flex;
-
-  box-shadow: 0 0 50px 20px blue;
+	min-height: 100px;
+	display: flex;
 }
 
-.block1{
-  flex: 50%;
+.block1 {
+	flex: 50%;
 }
 
-.block2{
-  flex: 50%;
+.block2 {
+	flex: 50%;
 }
 
-.ui{
-  background-color: bisque;
-  height: 100px;
-  margin: 5px;
+.ui-text {
+	display: none;
+	transition: 1s;
+	z-index: 2;
+}
+
+.ui {
+	height: 200px;
+	margin: 5px;
+
+	background-size: cover;
+	transition: 0.8s;
+	display: flex;
+}
+
+.ui:hover {
+	height: 300px;
+	filter: none;
+	transition: 1s;
+	.ui-text {
+		display: block;
+		transition: 1s;
+		backdrop-filter: blur(5px);
+		flex: 1 1 auto;
+	}
 }
 
 .ui1 {
-	border-radius: 0 0 40px 40px;
-  background-image: url('/img/dino-1.jpg');
-  background-size: cover;
+	border-radius: 5px 5px 40px 40px;
+	background-image: url('/img/dino-1.jpg');
 }
 .ui2 {
-	border-radius: 40px 0px 40px 0px;
-  background-image: url('/img/dino-2.jpg');
-  background-size: cover;
+	border-radius: 40px 5px 40px 5px;
+	background-image: url('/img/dino-2.jpg');
 }
 .ui3 {
-	border-radius: 0px 40px 0px 40px;
-  background-image: url('/img/dino-3.jpg');
-  background-size: cover;
+	border-radius: 5px 40px 5px 40px;
+	background-image: url('/img/dino-3.jpg');
 }
 .ui4 {
-	border-radius: 40px 40px 0px 0px;
-  background-image: url('/img/dino-4.jpg');
-  background-size: cover;
+	border-radius: 40px 40px 5px 5px;
+	background-image: url('/img/dino-4.jpg');
 }
 
 .ui5 {
-  border-radius: 0 0 40px 40px;
-  background-image: url('/img/dino-5.jpg');
-  background-size: cover;
+	border-radius: 5px 5px 40px 40px;
+	background-image: url('/img/dino-5.jpg');
 }
 .ui6 {
-  border-radius: 0px 40px 0px 40px;background-image: url('/img/dino-6.jpg');
-  background-size: cover;
+	border-radius: 5px 40px 5px 40px;
+	background-image: url('/img/dino-6.jpg');
 }
 .ui7 {
-  border-radius: 40px 0px 40px 0px;
-  background-image: url('/img/dino-7.jpg');
-  background-size: cover;
+	border-radius: 40px 5px 40px 5px;
+	background-image: url('/img/dino-7.jpg');
 }
 .ui8 {
-  border-radius: 40px 40px 0px 0px;
-  background-image: url('/img/dino-8.jpg');
-  background-size: cover;
+	border-radius: 40px 40px 5px 5px;
+	background-image: url('/img/dino-8.jpg');
+}
+
+.fullscreen-second {
+	min-height: 100vh;
+}
+
+@media (max-width: 715px) {
+	.squere {
+		min-height: 100px;
+		display: block;
+	}
 }
